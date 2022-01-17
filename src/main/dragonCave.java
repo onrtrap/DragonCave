@@ -34,17 +34,20 @@ public class dragonCave {
         }
         System.out.println(intro);
         while(!correctInput) {
-             input = in.nextLine();
-            if(input.equals("1") || input.equals("2"))
-            {
-                if (input.equals("1"))
-                {  System.out.println(firstCave);}
-                else if (input.equals("2"))
-                { System.out.println(secondCave);}
-                correctInput = true;
+            try {
+                input = in.nextLine();
+                if (input.equals("1") || input.equals("2")) {
+                    if (input.equals("1")) {
+                        System.out.println(firstCave);
+                    } else if (input.equals("2")) {
+                        System.out.println(secondCave);
+                    }
+                    correctInput = true;
+                }
             }
-            else
+            catch(Exception e) {
                 System.out.println("Please choose 1 or 2");
+            }
         }
 
         in.close();
