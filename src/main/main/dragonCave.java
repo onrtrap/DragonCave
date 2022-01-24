@@ -34,8 +34,8 @@ public class dragonCave {
         }
         System.out.println(intro);
         while(!correctInput) {
-            try {
                 input = in.nextLine();
+            try {
                 if (input.equals("1") || input.equals("2")) {
                     if (input.equals("1")) {
                         System.out.println(firstCave);
@@ -44,6 +44,8 @@ public class dragonCave {
                     }
                     correctInput = true;
                 }
+                else
+                    System.out.println("Please choose 1 or 2");
             }
             catch(Exception e) {
                 System.out.println("Please choose 1 or 2");
